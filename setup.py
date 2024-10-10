@@ -8,8 +8,8 @@ HERE = pathlib.Path(__file__).parent
 README = (HERE / "README.md").read_text()
 
 setup(
-    name="random-walk-env",  # Package name
-    version="0.0.1",  # Initial version
+    name="random-walk-env", 
+    version="0.0.2",  
     author="Falguni Das Shuvo", 
     author_email="dasshuvo7@gmail.com", 
     description="Random Walk Env: A Gymnasium environment for simulating a random walk process.",
