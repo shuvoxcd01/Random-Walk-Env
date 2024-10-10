@@ -12,8 +12,8 @@ setup(
     version="0.0.1",  # Initial version
     author="Falguni Das Shuvo", 
     author_email="dasshuvo7@gmail.com", 
-    description="A Gymnasium environment for simulating a random walk process.",  # Short description
-    long_description=README,  # Read the long description from README file
+    description="Random Walk Env: A Gymnasium environment for simulating a random walk process.",
+    long_description=README,  
     long_description_content_type="text/markdown",  # Specify the content type of the long description
     url="https://github.com/shuvoxcd01/Random-Walk-Env",  # URL to your project (e.g., GitHub repo)
     packages=find_packages(),  # Automatically find and include packages in the project
