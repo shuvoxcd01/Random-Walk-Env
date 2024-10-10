@@ -49,7 +49,7 @@ class RandomWalkEnv(gym.Env):
 
         return self.state, reward, done, False, {}
 
-    def reset(self, seed=None):
+    def reset(self, seed=None, options=None):
         super().reset(seed=seed)
 
         # Reset to the start state
