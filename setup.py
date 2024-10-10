@@ -9,7 +9,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="random-walk-env", 
-    version="0.0.2",  
+    version="0.0.3",  
     author="Falguni Das Shuvo", 
     author_email="dasshuvo7@gmail.com", 
     description="Random Walk Env: A Gymnasium environment for simulating a random walk process.",

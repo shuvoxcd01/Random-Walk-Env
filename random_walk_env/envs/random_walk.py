@@ -26,6 +26,8 @@ class RandomWalkEnv(gym.Env):
 
         # Set the current state to the start state
         self.state = self.start_state
+        self.state_letters = [chr(65 + i) for i in range(self.num_states)]  # A, B, C, D, E
+
 
     def step(self, action):
         # Perform the random walk step (ignoring action, random choice between left/right)
@@ -47,26 +49,29 @@ class RandomWalkEnv(gym.Env):
             done = False
             reward = 0  # All other states, no reward
 
-        return self.state, reward, done, False, {}
+        observation = self.state_letters[self.state]
+
+        return observation, reward, done, False, {}
 
     def reset(self, seed=None, options=None):
         super().reset(seed=seed)
 
         # Reset to the start state
         self.state = self.start_state
-        return self.state, {}
+        observation = self.state_letters[self.state]
+        
+        return observation, {}
 
     def render(self):
         # Simple rendering: Print the state as a letter corresponding to its position
-        state_letters = [chr(65 + i) for i in range(self.num_states)]  # A, B, C, D, E
-        state_str = "".join(state_letters)
+        state_str = "".join(self.state_letters)
         current_pos = max(0, min(self.state, self.num_states - 1))
 
         # Adding bold formatting and brackets around the current state
         display_str = (
             state_str[:current_pos]
             + "\033[1m["
-            + state_letters[current_pos]
+            + self.state_letters[current_pos]
             + "]\033[0m"
             + state_str[current_pos + 1 :]
         )
