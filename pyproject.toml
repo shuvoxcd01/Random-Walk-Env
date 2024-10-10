@@ -7,7 +7,7 @@ packages = ["random_walk_env"]
 
 [project]
 name = "random_walk_env"
-version = "0.0.2"
+version = "0.0.3"
 description = "A random walk environment for Gymnasium"
 readme = "README.md"  # Ensure this file exists
 long_description_content_type = "text/markdown"  # Specify Markdown here
